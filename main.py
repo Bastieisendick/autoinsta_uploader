@@ -20,7 +20,7 @@ display.start()
 time.sleep(round(random.uniform(1, 1800), 3))               #sleep half an hour at max, so it will not be to predictable
 
 chat_id = "PUT YOUR OWN TELEGRAM CHAT ID HERE"
-start_date = date(2023, 6, 15)
+start_date = date(2020, 12, 1)
 
 bot = None
 
@@ -111,14 +111,18 @@ try:            #main part, connect to instagram and post the post
 
     firefoxOptions = Options()
     firefoxOptions.set_preference("general.useragent.override", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15")
+    
     firefoxOptions.set_preference("intl.accept_languages", "de")
+    firefoxOptions.add_argument("-profile")
+    firefoxOptions.add_argument("YOUR FIREFOX PROFILE PATH")
 
-    firefoxOptions.add_argument("--private")
+
     firefoxOptions.add_argument("--window-size=820,1180")
 
     with webdriver.Firefox(options=firefoxOptions) as browser:
 
 
+        browser.delete_all_cookies()
         browser.set_window_size(820,1180)
 
         browser.get("https://www.instagram.com/")
@@ -129,7 +133,7 @@ try:            #main part, connect to instagram and post the post
         actions = ActionChains(browser)
 
         try:                #check if there is a cookie button present
-            cookie_button = browser.find_element(By.XPATH, "//button[@class='_a9-- _a9_0']")
+            cookie_button = browser.find_element(By.XPATH, "//button[@class='_a9-- _ap36 _a9_0']")
             actions = ActionChains(browser)
             actions.move_to_element(cookie_button).perform()
 
@@ -144,49 +148,52 @@ try:            #main part, connect to instagram and post the post
 
         browser.save_screenshot("debugging/screenshot_1_login.png")
 
-
-        username_input = browser.find_element(By.XPATH, "//input[@name='username']")
+        try:
+            username_input = browser.find_element(By.XPATH, "//input[@name='username']")
         
-        actions = ActionChains(browser)
-        actions.move_to_element(username_input).perform()
+            actions = ActionChains(browser)
+            actions.move_to_element(username_input).perform()
 
-        for char in "PUT YOUR IG USERNAME HERE":             #simulate some typing
-            username_input.send_keys(char)
-            time.sleep(round(random.uniform(0.23, 1.31), 3))
+            for char in "PUT YOUR IG USERNAME HERE":             #simulate some typing
+                username_input.send_keys(char)
+                time.sleep(round(random.uniform(0.23, 1.31), 3))
 
-        time.sleep(round(random.uniform(2.43, 4.27), 3))
+            time.sleep(round(random.uniform(2.43, 4.27), 3))
 
 
-        password_input = browser.find_element(By.XPATH, "//input[@name='password']")
+            password_input = browser.find_element(By.XPATH, "//input[@name='password']")
         
-        actions = ActionChains(browser)
-        actions.move_to_element(password_input).perform()
+            actions = ActionChains(browser)
+            actions.move_to_element(password_input).perform()
 
-        for char in "PUT YOUR IG PASSWORD HERE":             #simulate some typing
-            password_input.send_keys(char)
-            time.sleep(round(random.uniform(0.26, 1.39), 3))
+            for char in "PUT YOUR IG PASSWORD HERE":             #simulate some typing
+                password_input.send_keys(char)
+                time.sleep(round(random.uniform(0.26, 1.39), 3))
 
-        time.sleep(round(random.uniform(1.21, 3.82), 3))
+            time.sleep(round(random.uniform(1.21, 3.82), 3))
 
-        submit_button = browser.find_element(By.XPATH, "//button[@class='_acan _acap _acas _aj1-']")
+            submit_button = browser.find_element(By.XPATH, "//button[@class=' _acan _acap _acas _aj1- _ap30']")
 
-        actions = ActionChains(browser)
-        actions.move_to_element(submit_button).perform()
+            actions = ActionChains(browser)
+            actions.move_to_element(submit_button).perform()
 
-        time.sleep(round(random.uniform(1.21, 3.82), 3))
+            time.sleep(round(random.uniform(1.21, 3.82), 3))
 
-        submit_button.click()
+            submit_button.click()
 
-        time.sleep(round(random.uniform(56.45, 67.97), 3))
+            time.sleep(round(random.uniform(56.45, 67.97), 3))
 
-        browser.save_screenshot("debugging/screenshot_2_logged_in.png")
+            browser.save_screenshot("debugging/screenshot_2_logged_in.png")
 
-        browser.get("https://www.instagram.com/")
+            browser.get("https://www.instagram.com/")
 
-        time.sleep(round(random.uniform(78.12, 83.63), 3))
+            time.sleep(round(random.uniform(78.12, 83.63), 3))
+
+        except:
+            browser.save_screenshot("debugging/screenshot_2_5_alreadyloggedin.png")
 
         try:                #check if there is a notification button present
-            notification_button = browser.find_element(By.XPATH, "//button[@class='_a9-- _a9_1']")
+            notification_button = browser.find_element(By.XPATH, "//button[@class='_a9-- _ap36 _a9_1']")
             actions = ActionChains(browser)
             actions.move_to_element(notification_button).perform()
 
@@ -211,17 +218,17 @@ try:            #main part, connect to instagram and post the post
 
         create_button.click()
 
-        time.sleep(round(random.uniform(34.91, 38.64), 3))
+        time.sleep(round(random.uniform(64.91, 68.64), 3))
 
         browser.save_screenshot("debugging/screenshot_4_upload_video.png")
 
         upload_file = browser.find_element(By.CSS_SELECTOR, "input._ac69[accept*='video/mp4']")
         upload_file.send_keys(video_path)
 
-        time.sleep(round(random.uniform(69.46, 77.19), 3))
+        time.sleep(round(random.uniform(600.46, 900.19), 3))
 
         try:                #check if there is a reelcreation button present
-            reelcreation_button = browser.find_element(By.XPATH, "//button[@class='_acan _acap _acaq _acas _acav _aj1-']")
+            reelcreation_button = browser.find_element(By.XPATH, "//button[@class=' _acan _acap _acaq _acas _acav _aj1- _ap30']")
             actions = ActionChains(browser)
             actions.move_to_element(reelcreation_button).perform()
 
