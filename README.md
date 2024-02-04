@@ -11,9 +11,7 @@ Also any error that might occur and daily upload notifications will be send to y
 
 However, even with all these safety measurements, I do not guarantee IG wont find out ur using a Bot. Banning, or deletion can occur.
 
-Well i tested it for a few days and it worked quite well without being banned.
-EDIT:: This version got into a ratelimit after around 62 days, I'm sure because of the private browsing. So if you would save the cookies and login with them (Create and use a Browser Profile), then it would not detect I guess.
-I will try to add this in the near future.
+Well i tested it for many days and it worked quite well without being banned.
 
 It is totally possible and will probably happen that IG will change its frontend interface, so it might occur that you need to change the html variables or other factors for Selenium to continue working (Maybe youll need to add another button click in the future). But with the debugging and error logging in place, this is quite easy.
 
@@ -27,3 +25,4 @@ There can be errors or mistakes in the code, it was developed in under 2 days as
 (I also have another one for creating random memes and hashtags and music as posts on IG, I'll upload it if someone needs it)
 
 You will have to install some libraries like telebot, but that should not be a problem.
+Also you can just comment the display related stuff out, if you dont want to run it in the background or your on Windows.
