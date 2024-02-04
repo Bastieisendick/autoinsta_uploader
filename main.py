@@ -122,7 +122,6 @@ try:            #main part, connect to instagram and post the post
     with webdriver.Firefox(options=firefoxOptions) as browser:
 
 
-        browser.delete_all_cookies()
         browser.set_window_size(820,1180)
 
         browser.get("https://www.instagram.com/")
