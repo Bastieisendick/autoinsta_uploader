@@ -9,7 +9,8 @@ Then it uses (Firefox) Selenium to log in into Instagram and proceeds to upload 
 It uses random delays, hovering over elements and more (such as modified user agents) to prevent IG from detecting the Bot.
 Also any error that might occur and daily upload notifications will be send to you through Telegram Bot API.
 
-However, even with all these safety measurements, I do not guarantee IG wont find out ur using a Bot. Banning, or deletion can occur.
+However, even with all these safety measurements, I do not guarantee IG wont find out ur using a Bot.
+Using this may result in bans and other desastrous actions regarding for example your Instagram Account. Hereby no guarantees or responsibilities are taken.
 
 Well i tested it for many days and it worked quite well without being banned.
 
