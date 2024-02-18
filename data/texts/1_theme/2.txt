@@ -1,0 +1,5 @@
+Day {daycount}
+
+{quote}
+
+#good #ok
