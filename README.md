@@ -5,7 +5,7 @@ Automatic Instagram Posting Bot
 This Program can be run for example via crontab once (or more) a day.
 It takes a random video from data/videos/, its suiting quote from data/quotes/, a random thumbnail from data/thumbnails/ and a random text from data/texts/.
 
-Then it uses [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) Selenium to log in into Instagram and proceeds to upload the previously selected data.
+Then it uses [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) Selenium to log in into Instagram and proceeds to upload the previously selected data.<br/>
 It uses random delays, hovering over elements and more (such as modified user agents) to prevent IG from detecting the Bot.
 Also any error that might occur and daily upload notifications will be send to you through Telegram Bot API.
 
@@ -23,9 +23,6 @@ It is totally possible and will probably happen that IG will change its frontend
 
 This was tested and run successfully on an Old TV-Box with armbian installed (Altough these TV-Boxes are known to have spying software preinstalled :)  )
 Also works on Windows and Ubuntu!
-
-If you want to use this for non commercial or commercial usage, youre completely free to use it. Also for every other reason you can use it!
-BUT it would be pretty cool if you'd tell me your IG channel so i could watch as you improve your IG life :)
 
 There can be errors or mistakes in the code, it was developed in under 2 days as a small fun project.
 (I also have another one for creating random memes and hashtags and music as posts on IG, I'll upload it if someone needs it)
