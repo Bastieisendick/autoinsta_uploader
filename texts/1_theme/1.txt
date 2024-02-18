@@ -1,6 +1,0 @@
-Day {daycount}
-    Hello my followers
-
-{quote}
-
-#cool #ok
