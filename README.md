@@ -17,4 +17,4 @@ Using this may result in bans and other desastrous actions regarding for example
 It is totally possible and will probably happen that IG will change its frontend interface, so it might occur that you need to change the html variables or other factors for Selenium to continue working (Maybe youll need to add another button click in the future).<br/>
 But with the debugging and error logging in place, this is quite easy.<br/>
 
-You will have to install some libraries like [telebot/pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) and [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver), but that should not be a problem.<br/>
+You will have to install some libraries like [telebot/pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) and [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver).<br/>
