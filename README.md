@@ -6,7 +6,7 @@ It takes a random video from data/videos/, its suiting quote from data/quotes/, 
 
 Then it uses [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) Selenium to log in into Instagram and proceeds to upload the previously selected data.<br/>
 It uses random delays, hovering over elements and more (such as modified user agents) to prevent IG from detecting the Bot.<br/>
-Also any error that might occur and daily upload notifications will be send to you through Telegram Bot API.<br/>
+Also any error that might occur and upload notifications will be send to you through Telegram Bot API.<br/>
 
 You will have to change the variables in the start of the file to your own values.<br/>
 Also you need to download a suiting chromedriver and move it into the driver/ folder.<br/>
